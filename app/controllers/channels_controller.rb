@@ -9,7 +9,7 @@ class ChannelsController < ApplicationController
 
   # GET /channels/1 or /channels/1.json
   def show
-    @discussions = Discussion.where('channel_id = ?', @channel_id)
+    @discussions = Discussion.where('channel_id = ?', @channel.id)
     @channels = Channel.all
   end
 
